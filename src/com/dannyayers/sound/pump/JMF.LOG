@@ -1,0 +1,44 @@
+#
+# JMF Version 2.1
+#
+
+## Platform: Windows 2000, x86, 5.0
+## Java VM: Sun Microsystems Inc., 1.3.0
+
+$$ Profile: instantiation: 15 ms
+
+## Processor created: com.sun.media.processor.unknown.Handler@4f9fdc
+##   using DataSource: com.sun.media.protocol.file.DataSource@6f137d
+
+$$ Profile: parsing: 156 ms
+
+## Building flow graph for: file:/F:/clip1.avi
+
+## Building Track: 0
+## Input: IV50, 320x240, FrameRate=10.0, Length=172800 0 extra bytes
+
+
+## Building Track: 1
+## Input: LINEAR, 22050.0 Hz, 8-bit, Mono, Unsigned, FrameSize=8 bits
+
+
+## Here's the completed flow graph:
+  com.sun.media.parser.video.AviParser@3411a
+     connects to: com.sun.media.codec.video.vcm.NativeDecoder@27508a
+     format: IV50, 320x240, FrameRate=10.0, Length=172800 0 extra bytes
+  com.sun.media.codec.video.vcm.NativeDecoder@27508a
+     connects to: com.sun.media.renderer.video.GDIRenderer@6845c2
+     format: RGB, 320x240, FrameRate=10.0, Length=230400, 24-bit, Masks=3:2:1, PixelStride=3, LineStride=960, Flipped
+  com.sun.media.parser.video.AviParser@3411a
+     connects to: com.sun.media.renderer.audio.JavaSoundRenderer@589e56
+     format: LINEAR, 22050.0 Hz, 8-bit, Mono, Unsigned, FrameSize=8 bits
+
+
+$$ Profile: graph building: 343 ms
+
+$$ Profile: realize, post graph building: 32 ms
+
+$$ Profile: prefetch: 594 ms
+
+## Computed latency for video: 352 ms
+

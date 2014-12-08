@@ -1,0 +1,91 @@
+/*
+ * 	Player.java
+ */
+
+import	java.io.*;
+import	javax.sound.sampled.*;
+
+public class Player extends Thread  
+{
+	SourceDataLine sdline;
+	static boolean playing;
+	int position;
+	int	frames;
+	AudioInputStream audioInputStream;
+
+	public Player()
+	{
+		DataLine.Info	info = new DataLine.Info(SourceDataLine.class, Dictate.format);
+		sdline = null;
+		try
+		{
+			sdline = (SourceDataLine) AudioSystem.getLine(info);
+		}
+		catch (LineUnavailableException e)
+		{
+			System.out.println(e);
+		}
+	}
+
+	public void startPlay()
+	{
+		playing = true;
+		File	soundFile = new File("dictate.wav");
+		audioInputStream = null;
+		try
+		{
+			audioInputStream = AudioSystem.getAudioInputStream(soundFile);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		try
+		{
+			sdline.open(Dictate.format, Dictate.buffersize);
+		}
+		catch (LineUnavailableException e)
+		{
+			System.out.println(e);
+		}
+		sdline.start();
+		super.start();
+	}
+
+	public void run()
+	{
+		playing = true;
+		int bytes = 0;
+		int length = (int)audioInputStream.getFrameLength()*Dictate.framesize;
+		byte[]	byteData = new byte[Dictate.buffersize]; 
+		position = 0;
+		while (bytes != -1)
+		{
+			try
+			{
+				bytes = audioInputStream.read(byteData, 0, Dictate.buffersize);
+			}
+			catch (IOException e)
+			{
+				e.printStackTrace();
+			}
+		if (bytes >= 0) 
+			{
+				frames = bytes / Dictate.framesize;
+				position	+= sdline.write(byteData, 0, bytes);
+				Dictate.level = 128*(float)position/(float)length;
+			}
+		}
+	stopPlay();
+	}
+
+
+	public void stopPlay()
+	{
+		sdline.drain();
+		sdline.stop();
+		sdline.close();
+		playing = false;
+	}
+}
+

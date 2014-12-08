@@ -1,0 +1,103 @@
+#
+# JMF Version 2.1
+#
+
+## Platform: Windows 2000, x86, 5.0
+## Java VM: Sun Microsystems Inc., 1.3.0
+
+$$ Profile: instantiation: 16 ms
+
+## Processor created: com.sun.media.processor.unknown.Handler@290fbc
+##   using DataSource: com.sun.media.protocol.javasound.DataSource@2cb49d
+
+$$ Profile: parsing: 47 ms
+
+## Building flow graph for: javasound://44100
+
+## Building Track: 0
+## Input: LINEAR, 44100.0 Hz, 16-bit, Stereo, LittleEndian, Signed
+## Custom options specified.
+## An output format is specified: mpeglayer3, Unknown Sample Rate
+## An output content type is specified: MPEG Audio
+    
+
+## Here's the completed flow graph:
+      com.sun.media.parser.RawBufferParser@70888e
+         connects to: com.sun.media.codec.audio.mpa.NativeEncoder@1563ff
+         format: LINEAR, 44100.0 Hz, 16-bit, Stereo, LittleEndian, Signed
+      com.sun.media.codec.audio.mpa.NativeEncoder@1563ff
+         connects to: com.sun.media.multiplexer.audio.MPEGMux@581593
+         format: mpeglayer3, 44100.0 Hz, 16-bit, Stereo, BigEndian, Signed, 16000.0 frame rate, FrameSize=8 bits
+    
+
+$$ Profile: graph building: 328 ms
+
+$$ Profile: realize, post graph building: 31 ms
+
+## DataSink created: com.sun.media.datasink.file.Handler@444b88
+##   using DataSource: com.sun.media.multiplexer.BasicMux$BasicMuxDataSource@3ad33d
+
+## Computed latency for video: 125 ms
+
+$$ Profile: instantiation: 0 ms
+
+## Player created: com.sun.media.content.unknown.Handler@941f7
+##   using DataSource: com.sun.media.protocol.file.DataSource@1cb0f4
+
+$$ Profile: parsing: 31 ms
+
+## Building flow graph for: file:/F:/jmwrox/chapB/jmfdictate/dictate.mp3
+
+## Building Track: 0
+## Input: mpeglayer3, 44100.0 Hz, 16-bit, Stereo, LittleEndian, Signed, FrameSize=32768 bits
+
+
+## Here's the completed flow graph:
+  com.ibm.media.parser.video.MpegParser@51e730
+     connects to: com.sun.media.codec.audio.mpa.NativeDecoder@2116c9
+     format: mpeglayer3, 44100.0 Hz, 16-bit, Stereo, LittleEndian, Signed, FrameSize=32768 bits
+  com.sun.media.codec.audio.mpa.NativeDecoder@2116c9
+     connects to: com.sun.media.renderer.audio.JavaSoundRenderer@1e2ca7
+     format: LINEAR, 44100.0 Hz, 16-bit, Stereo, BigEndian, Signed
+
+
+$$ Profile: graph building: 172 ms
+
+$$ Profile: realize, post graph building: 0 ms
+
+$$ Profile: prefetch: 375 ms
+
+$$ Profile: instantiation: 0 ms
+
+## Processor created: com.sun.media.processor.unknown.Handler@15cfbe
+##   using DataSource: com.sun.media.protocol.javasound.DataSource@3ad8a8
+
+$$ Profile: parsing: 31 ms
+
+## Building flow graph for: javasound://44100
+
+## Building Track: 0
+## Input: LINEAR, 44100.0 Hz, 16-bit, Stereo, LittleEndian, Signed
+## Custom options specified.
+## An output format is specified: mpeglayer3, Unknown Sample Rate
+## An output content type is specified: MPEG Audio
+    
+
+## Here's the completed flow graph:
+      com.sun.media.parser.RawBufferParser@150198
+         connects to: com.sun.media.codec.audio.mpa.NativeEncoder@1bb25a
+         format: LINEAR, 44100.0 Hz, 16-bit, Stereo, LittleEndian, Signed
+      com.sun.media.codec.audio.mpa.NativeEncoder@1bb25a
+         connects to: com.sun.media.multiplexer.audio.MPEGMux@5a6bf4
+         format: mpeglayer3, 44100.0 Hz, 16-bit, Stereo, BigEndian, Signed, 16000.0 frame rate, FrameSize=8 bits
+    
+
+$$ Profile: graph building: 63 ms
+
+$$ Profile: realize, post graph building: 0 ms
+
+## DataSink created: com.sun.media.datasink.file.Handler@17d01f
+##   using DataSource: com.sun.media.multiplexer.BasicMux$BasicMuxDataSource@60a386
+
+## Computed latency for video: 125 ms
+

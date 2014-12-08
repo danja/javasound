@@ -1,0 +1,90 @@
+/*
+ *	Recorder.java
+ */
+
+import java.io.*;
+import javax.sound.sampled.*;
+
+public class Recorder extends Thread
+{
+	TargetDataLine tdline;
+	AudioInputStream audioInputStream;
+	ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+
+	static boolean recording;
+
+	public Recorder()
+	{
+		DataLine.Info	info = new DataLine.Info(TargetDataLine.class, Dictate.format);
+		tdline = null;
+		try
+		{
+			tdline = (TargetDataLine) AudioSystem.getLine(info);
+			tdline.open(Dictate.format,Dictate.buffersize); 
+		}
+		catch (LineUnavailableException e)
+		{
+			System.out.println(e);
+		}
+	}
+
+	public void run()
+	{
+/// Mention this!! 		Dictate.buffersize = tdline.availableRead();
+		byte[] buffer = new byte[Dictate.buffersize]; 
+		int	nBufferFrames = Dictate.buffersize / Dictate.framesize;
+		recording = true;
+		while (recording)
+		{
+			int	nFramesRead = tdline.read(buffer, 0, nBufferFrames);
+
+			int	nBytesToWrite = nFramesRead * Dictate.framesize;
+
+			int peak = 0;
+			for(int i =1;i<Dictate.buffersize-1;i+=Dictate.framesize)
+			{
+				peak = buffer[i]>peak ? buffer[i] : peak; 
+				Dictate.level = peak;
+			}
+			if(peak>Dictate.threshold)	byteArrayOutputStream.write(buffer, 0, nBytesToWrite);
+		}
+	}
+
+	public void startRec()
+	{
+		tdline.start();
+		super.start();
+	}
+
+	public void stopRec()
+	{
+		tdline.drain();
+		tdline.stop();
+		tdline.close();
+		recording = false;
+		try
+		{
+			byteArrayOutputStream.close();
+		}
+		catch (IOException e)
+		{
+			System.out.println(e);
+		}
+		byte[]	byteData = byteArrayOutputStream.toByteArray();
+		ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteData);
+		audioInputStream = 
+			new AudioInputStream(byteArrayInputStream, Dictate.format, byteData.length/Dictate.framesize);
+        try 
+		{
+               	if (AudioSystem.write(audioInputStream, AudioFileFormat.Type.WAVE, new File("dictate.wav")) == -1) 
+				{
+					System.out.println("Problems writing to file");
+				} 
+		} 
+		catch (Exception e) 
+		{ 
+			System.out.println(e); 
+		}
+	}
+}
+

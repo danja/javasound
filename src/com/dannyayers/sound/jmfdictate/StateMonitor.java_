@@ -1,0 +1,144 @@
+import javax.media.*;
+
+public class StateMonitor implements ControllerListener {
+
+	static long timeout = 5000; // test with too short - include error
+	long starttime;
+	Player player = null;
+	boolean configured = false;
+	boolean realized = false;
+	boolean prefetched = false;
+	boolean end = false;
+	boolean error = false;
+	boolean closed = false;
+    
+	public StateMonitor(Player p) 
+	{
+		player = p;
+		p.addControllerListener(this);
+	}
+
+	public synchronized boolean configure() 
+	{
+		Dictate.level = 32;
+		starttime = System.currentTimeMillis();
+		if (player instanceof Processor) ((Processor)player).configure();
+			else return false;
+		while (!configured && !error) 
+		{
+			try 
+			{
+				wait(timeout);
+			}catch (Exception e){}
+		if (System.currentTimeMillis()-starttime > timeout)break;
+		}
+		return configured&&!error;
+    }
+     
+	public synchronized boolean realize() 
+	{
+		Dictate.level = 64;
+		starttime = System.currentTimeMillis();
+		player.realize();
+		while(!realized && !error) 
+		{
+			try 
+			{
+				wait(timeout);
+			}catch(Exception e){}
+			if (System.currentTimeMillis()-starttime > timeout) break;
+		}
+		return realized && !error;
+   }
+
+	public synchronized boolean prefetch() 
+	{
+		Dictate.level = 96;
+		starttime = System.currentTimeMillis();
+		player.prefetch();
+		while(!prefetched && !error) 
+		{
+			try 
+			{
+				wait(timeout);
+			}catch(Exception e){}
+		if(System.currentTimeMillis()-starttime > timeout) break;
+		}
+		return prefetched && !error;
+    }
+
+	public void start()
+	{
+		this.start(true, 0);
+	}
+ 
+	public void start(double duration)
+	{
+		this.start(false, duration);
+	}
+ 
+	public synchronized boolean start(boolean capture, double duration) 
+	{
+		Dictate.level = 128;
+		starttime = System.currentTimeMillis();
+		end = false;
+		player.start();
+
+		while (!end && !error) 
+		{
+			try 
+			{
+				wait(100);
+			}catch(Exception e) {}
+
+			Dictate.level = (int)(128*(player.getMediaTime().getSeconds()/duration));
+			if (capture)break;
+		}
+		return end && !error;
+	}
+
+	public synchronized void close() 
+	{
+		player.close();
+		while(!closed) 
+		{
+			try 
+			{
+				wait(timeout);
+			}catch(Exception e){}
+		}
+		player.removeControllerListener(this);
+		Dictate.showlevel = false;
+	}
+
+	public synchronized void controllerUpdate(ControllerEvent cevent) 
+	{
+	System.out.println(cevent.getClass());
+		if (cevent instanceof RealizeCompleteEvent) 
+		{
+			realized = true;
+		} 
+		else if(cevent instanceof ConfigureCompleteEvent) 
+		{
+			configured = true;
+		} 
+		else if(cevent instanceof PrefetchCompleteEvent) 
+		{
+			prefetched = true;
+		} 
+		else if(cevent instanceof EndOfMediaEvent) 
+		{
+			end = true;
+		} 
+		else if(cevent instanceof ControllerErrorEvent) 
+		{
+			error = true;
+		} 
+		else if(cevent instanceof ControllerClosedEvent) 
+		{
+			closed = true;
+		} 
+		else return;
+		notifyAll();
+	}
+}
