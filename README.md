@@ -2,7 +2,7 @@
 
 (quite old) Java sound docs and demos, sampled &amp; midi
 
-The material here was intended for publication, but unfortunately the project was cancelled before completion. This stuff has sat on the shelf for a good while now, so it might as well go somewhere where it might do someone some good. All rights reserved on the lot.
+The material here was intended for publication, but unfortunately the project was cancelled before completion. This stuff has sat on the shelf for a good while now, so it might as well go somewhere where it might do someone some good. Copyright mine, license whatever suits you, attribution appreciated.
 
 There were going to be 3 chapters outlined as below, I got as far as getting the code for all the demo apps to work (though not perfect) and first draft write-up of chapter A (Javasound), started chapter B (JMF audio) and did some notes for C (JMF audio-visual). The text is in MS Word format, all source code is included (together with bits of junk, and a fractal MIDI player I couldn't find a good place for).
 
