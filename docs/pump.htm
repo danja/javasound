@@ -1,0 +1,643 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./pump_files/filelist.xml">
+<link rel=Edit-Time-Data href="./pump_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Chapter C: Video in Your Programs</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Danny</o:Author>
+  <o:LastAuthor>Danny Ayers</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>14</o:TotalTime>
+  <o:Created>2001-07-24T21:50:00Z</o:Created>
+  <o:LastSaved>2001-07-24T21:50:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>108</o:Words>
+  <o:Characters>617</o:Characters>
+  <o:Company>Isacat</o:Company>
+  <o:Lines>5</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>757</o:CharactersWithSpaces>
+  <o:Version>9.4119</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Palatino;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Book Antiqua";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:FranklinGothic;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-parent:"";
+	mso-style-next:Normal;
+	margin-top:22.0pt;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:18.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:FranklinGothic;
+	mso-fareast-font-family:"Arial Unicode MS";
+	mso-bidi-font-family:"Arial Unicode MS";
+	color:teal;
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0cm;
+	margin-right:-11.35pt;
+	margin-bottom:0cm;
+	margin-left:17.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 207.65pt right 415.3pt;
+	font-size:9.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Palatino;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;
+	letter-spacing:.3pt;
+	mso-ansi-language:EN-US;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:2003117099;
+	mso-list-type:simple;
+	mso-list-template-ids:134807553;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-GB style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal style='tab-stops:0cm 16.2pt 32.4pt 48.6pt 64.8pt 81.0pt 97.2pt 4.0cm 129.6pt 145.8pt 162.0pt 178.2pt 194.4pt 210.6pt 8.0cm 243.0pt 259.2pt 275.4pt 291.6pt 307.8pt 324.0pt 12.0cm 356.4pt 372.6pt 388.8pt 405.0pt 421.2pt 437.4pt 16.0cm 469.8pt 486.0pt 502.2pt;
+mso-layout-grid-align:none;text-autospace:none'><span lang=EN-US
+style='font-size:9.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b>Pump - Platform Unlimited Media Player<o:p></o:p></b></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+  <p class=MsoNormal>A media player that will play/record sound and video.</p>
+  <p class=MsoNormal>This is its control panel :</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:line id="_x0000_s1027" style='position:absolute;
+ z-index:2' from="41.25pt,52.95pt" to="68.25pt,59.7pt">
+ <v:stroke endarrow="block"/>
+</v:line><v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202"
+ path="m0,0l0,21600,21600,21600,21600,0xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s1037" type="#_x0000_t202" style='position:absolute;
+ margin-left:-1.75pt;margin-top:34.1pt;width:54pt;height:18.75pt;z-index:12'
+ stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1037' inset="0,0,0,0">
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt;
+    mso-bidi-font-family:Arial'>Volume <o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:line id="_x0000_s1029" style='position:absolute;z-index:4' from="207.75pt,33pt"
+ to="207.75pt,53.25pt">
+ <v:stroke endarrow="block"/>
+</v:line><v:shape id="_x0000_s1039" type="#_x0000_t202" style='position:absolute;
+ margin-left:170.9pt;margin-top:12.2pt;width:79.5pt;height:18.75pt;z-index:14'
+ stroked="f">
+ <v:textbox inset="0,0,0,0">
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt;
+    mso-bidi-font-family:Arial'>Status Display <o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:line id="_x0000_s1028" style='position:absolute;z-index:3' from="114pt,30.75pt"
+ to="114pt,53.25pt">
+ <v:stroke endarrow="block"/>
+</v:line><v:shape id="_x0000_s1038" type="#_x0000_t202" style='position:absolute;
+ margin-left:99.5pt;margin-top:12.2pt;width:33.75pt;height:18.75pt;z-index:13'
+ stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1038' inset="0,0,0,0">
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt;
+    mso-bidi-font-family:Arial'>Loop<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:1;left:-2px;top:16px;width:338px;height:86px'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=0 height=0></td>
+  <td width=96></td>
+  <td width=39></td>
+  <td width=47></td>
+  <td width=48></td>
+  <td width=108></td>
+ </tr>
+ <tr>
+  <td height=29></td>
+  <td colspan=2></td>
+  <td rowspan=2 align=left valign=top><img width=47 height=57
+  src="./pump_files/image001.gif" v:shapes="_x0000_s1028 _x0000_s1038"></td>
+  <td></td>
+  <td rowspan=2 align=left valign=top><img width=108 height=57
+  src="./pump_files/image002.gif" v:shapes="_x0000_s1029 _x0000_s1039"></td>
+ </tr>
+ <tr>
+  <td height=28></td>
+  <td rowspan=2 align=left valign=top><img width=96 height=41
+  src="./pump_files/image003.gif" v:shapes="_x0000_s1027 _x0000_s1037"></td>
+ </tr>
+ <tr>
+  <td height=13></td>
+ </tr>
+</table>
+
+</span><![endif]><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p><p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><!--[if gte vml 1]><v:line
+ id="_x0000_s1035" style='position:absolute;left:0;text-align:left;flip:y;
+ z-index:10' from="249pt,54.9pt" to="249pt,78.15pt">
+ <v:stroke endarrow="block"/>
+ <w:wrap anchorx="page"/>
+</v:line><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:9;left:0px;margin-left:326px;margin-top:72px;width:14px;
+height:34px'><img width=14 height=34 src="./pump_files/image004.gif" v:shapes="_x0000_s1035"></span><![endif]><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:218.25pt;
+ height:57pt'>
+ <v:imagedata src="./pump_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=291 height=76
+src="./pump_files/image006.jpg" v:shapes="_x0000_i1025"><![endif]></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:line id="_x0000_s1026" style='position:absolute;
+ flip:y;z-index:1' from="42.75pt,.15pt" to="68.25pt,15.15pt">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1031" style='position:absolute;flip:y;z-index:6'
+ from="150pt,.15pt" to="150pt,24.15pt">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1033" style='position:absolute;flip:y;z-index:8'
+ from="199.5pt,.9pt" to="199.5pt,24.15pt">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1036" style='position:absolute;flip:y;z-index:11'
+ from="273.75pt,.9pt" to="273.75pt,21.9pt">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1034" style='position:absolute;flip:y;z-index:9'
+ from="222pt,1.65pt" to="222pt,22.65pt">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1032" style='position:absolute;flip:y;z-index:7'
+ from="175.5pt,.9pt" to="175.5pt,25.65pt">
+ <v:stroke endarrow="block"/>
+</v:line><v:line id="_x0000_s1030" style='position:absolute;flip:y;z-index:5'
+ from="112.5pt,1.65pt" to="112.5pt,22.65pt">
+ <v:stroke endarrow="block"/>
+</v:line><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:0'><span style='position:absolute;left:56px;top:-1px;
+width:317px;height:37px'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=0 height=0></td>
+  <td width=38></td>
+  <td width=50></td>
+  <td width=14></td>
+  <td width=36></td>
+  <td width=14></td>
+  <td width=20></td>
+  <td width=14></td>
+  <td width=18></td>
+  <td width=14></td>
+  <td width=16></td>
+  <td width=14></td>
+  <td width=55></td>
+  <td width=14></td>
+ </tr>
+ <tr>
+  <td height=1></td>
+  <td rowspan=3 align=left valign=top><img width=38 height=23
+  src="./pump_files/image007.gif" v:shapes="_x0000_s1026"></td>
+  <td colspan=3></td>
+  <td rowspan=6 align=left valign=top><img width=14 height=35
+  src="./pump_files/image008.gif" v:shapes="_x0000_s1031"></td>
+ </tr>
+ <tr>
+  <td height=1></td>
+  <td colspan=3></td>
+  <td></td>
+  <td rowspan=6 align=left valign=top><img width=14 height=36
+  src="./pump_files/image009.gif" v:shapes="_x0000_s1032"></td>
+  <td></td>
+  <td rowspan=5 align=left valign=top><img width=14 height=34
+  src="./pump_files/image010.gif" v:shapes="_x0000_s1033"></td>
+  <td colspan=3></td>
+  <td rowspan=3 align=left valign=top><img width=14 height=31
+  src="./pump_files/image011.gif" v:shapes="_x0000_s1036"></td>
+ </tr>
+ <tr>
+  <td height=21></td>
+  <td></td>
+  <td rowspan=3 align=left valign=top><img width=14 height=31
+  src="./pump_files/image012.gif" v:shapes="_x0000_s1030"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td rowspan=3 align=left valign=top><img width=14 height=31
+  src="./pump_files/image013.gif" v:shapes="_x0000_s1034"></td>
+ </tr>
+ <tr>
+  <td height=9></td>
+ </tr>
+ <tr>
+  <td height=1></td>
+ </tr>
+ <tr>
+  <td height=2></td>
+ </tr>
+ <tr>
+  <td height=2></td>
+ </tr>
+</table>
+
+</span></span><![endif]><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1046" type="#_x0000_t202"
+ style='position:absolute;margin-left:260.25pt;margin-top:11.1pt;width:31.5pt;
+ height:9pt;z-index:21' stroked="f">
+ <v:textbox inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:20;margin-left:347px;margin-top:15px;width:44px;height:14px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=44 height=14 align=left valign=top bgcolor=white style='vertical-align:
+  top;background:white'><![endif]><![if !mso]><span style='position:absolute;
+  z-index:21'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1046" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Pause<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1045" type="#_x0000_t202"
+ style='position:absolute;margin-left:235.5pt;margin-top:23.1pt;width:38.25pt;
+ height:14.25pt;z-index:20' stroked="f">
+ <v:textbox inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:19;margin-left:314px;margin-top:31px;width:53px;height:21px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=53 height=21 align=left valign=top bgcolor=white style='vertical-align:
+  top;background:white'><![endif]><![if !mso]><span style='position:absolute;
+  z-index:20'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1045" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Record<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1043" type="#_x0000_t202"
+ style='position:absolute;margin-left:190.5pt;margin-top:23.1pt;width:21pt;
+ height:16.5pt;z-index:18' stroked="f">
+ <v:textbox inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:17;margin-left:254px;margin-top:31px;width:30px;height:24px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=30 height=24 align=left valign=top bgcolor=white style='vertical-align:
+  top;background:white'><![endif]><![if !mso]><span style='position:absolute;
+  z-index:18'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1043" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Play<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1044" type="#_x0000_t202"
+ style='position:absolute;margin-left:215.25pt;margin-top:11.85pt;width:19.5pt;
+ height:14.25pt;z-index:19' stroked="f">
+ <v:textbox inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:18;margin-left:287px;margin-top:16px;width:28px;height:21px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=28 height=21 align=left valign=top bgcolor=white style='vertical-align:
+  top;background:white'><![endif]><![if !mso]><span style='position:absolute;
+  z-index:19'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1044" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Cue<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1047" type="#_x0000_t202"
+ style='position:absolute;margin-left:162.75pt;margin-top:13.2pt;width:27pt;
+ height:16.5pt;z-index:22' stroked="f">
+ <v:textbox inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:21;margin-left:217px;margin-top:18px;width:38px;height:24px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=38 height=24 align=left valign=top bgcolor=white style='vertical-align:
+  top;background:white'><![endif]><![if !mso]><span style='position:absolute;
+  z-index:22'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1047" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Stop<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1042" type="#_x0000_t202"
+ style='position:absolute;margin-left:127.5pt;margin-top:23.85pt;width:33pt;
+ height:15pt;z-index:17' stroked="f">
+ <v:textbox inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:16;margin-left:170px;margin-top:32px;width:46px;height:22px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=46 height=22 align=left valign=top bgcolor=white style='vertical-align:
+  top;background:white'><![endif]><![if !mso]><span style='position:absolute;
+  z-index:17'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1042" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Review<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1041" type="#_x0000_t202"
+ style='position:absolute;margin-left:94.5pt;margin-top:12.6pt;width:36.75pt;
+ height:20.25pt;z-index:16' stroked="f">
+ <v:textbox inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:15;margin-left:126px;margin-top:17px;width:51px;height:29px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=51 height=29 align=left valign=top bgcolor=white style='vertical-align:
+  top;background:white'><![endif]><![if !mso]><span style='position:absolute;
+  z-index:16'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1041" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Load<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1040" type="#_x0000_t202"
+ style='position:absolute;margin-left:21.75pt;margin-top:2.1pt;width:33.75pt;
+ height:19.5pt;z-index:15' stroked="f">
+ <v:textbox inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:14;margin-left:29px;margin-top:3px;width:47px;height:28px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=47 height=28 align=left valign=top bgcolor=white style='vertical-align:
+  top;background:white'><![endif]><![if !mso]><span style='position:absolute;
+  z-index:15'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1040" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Exit<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style="mso-spacerun: yes"> </span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>JMF must be installed.</p>
+
+<p class=MsoNormal>It should load and play any media file supported by JMF
+(virtually anything).</p>
+
+<p class=MsoNormal>It will record sound &amp; video (if a card is installed)
+saving as .avi, otherwise sound only saving as .mp3.</p>
+
+<p class=MsoNormal>The volume control works by clicking on it and moving mouse
+vertically up/down.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>The app is built around 5 Java files :</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Pump.java - main() method and main window</p>
+
+<p class=MsoNormal>GUI.java - user interface</p>
+
+<p class=MsoNormal>Knob.java - volume knob component</p>
+
+<p class=MsoNormal>MediaBox.java - control class (has methods like loadFile(),
+rew() etc.)</p>
+
+<p class=MsoNormal>StateMonitor.java - manages state changes of JMF
+Player/Processor </p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Button icons etc. are in IMAGES subdirectory.</p>
+
+<p class=MsoNormal><span style="mso-spacerun: yes"> </span></p>
+
+</div>
+
+</body>
+
+</html>
